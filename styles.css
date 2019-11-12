@@ -1,0 +1,74 @@
+.instituição {
+  color: #056b72;
+}
+
+h1 {
+  color: #6d6e6d;
+  text-align: center;
+  font-family: Helvetica;
+}
+
+h2 {
+  color: #949c38;
+  text-align: center;
+  font-family: Helvetica;
+}
+
+h3 {
+  text-align: center;
+  font-family: Helvetica;
+}
+
+h4 {
+  text-align: left;
+  font-family: Helvetica;
+}
+
+th, td {
+  padding: 20px;
+}
+
+html {
+  font-family: 'helvetica', helvetica;
+}
+
+thead th, tfoot th {
+  font-family: 'Helvetica';
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 30%;
+}
+
+th {
+  letter-spacing: 2px;
+  text-align: center;
+  color: white;
+}
+
+td {
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+input {
+  text-align: left;
+
+}
+
+.navbar {
+  background: #003e52;
+
+}
+.thead-cor {
+  background-color: #169898;
+}
+
+.btn {
+  color: white;
+  background-color: #169898;
+}
