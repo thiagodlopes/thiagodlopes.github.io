@@ -32,10 +32,17 @@
       </div>
     </nav>
 
-    <input type="number" placeholder="V1" id="notaV1" min="0" max="8">
-    <input type="number" placeholder="Média desejada" id="mediaDesejada" min="0" max="10">
-    <input type="button" value="Enviar" onclick="notaV2()">
-    <p id="mediaFinal"></p>
+    <form class="form-inline">
+      <div class="form-group mb-1">
+        <input type="number" placeholder="V1" id="notaV1" min="0" max="8">
+      </div>
+      <div class="form-group mx-sm-3 mb-1">
+        <input type="number" placeholder="Média desejada" id="mediaDesejada" min="0" max="10">
+      </div>
+      <button type="button" class="btn" onclick="notaV2()">Enviar</button>
+      <p id="mediaFinal"></p>
+    </form>
+
 
    <script src="media.js" charset="utf-8"></script>
   </body>
