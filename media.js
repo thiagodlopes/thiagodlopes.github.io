@@ -29,6 +29,7 @@ function mediaEad (notaV1, notaV2) {
 
 function exibirMedia (notaV1, notaV2, mediaResultado){
   mediaFinal.innerHTML = `A sua nota da V1 é:  ${notaV1.toFixed(2)}<br>`
+  mediaFinal.innerHTML += `Os 20% da V2 equivalem a: ${(notaV2 * 0.2).toFixed(2)}<br>`
   mediaFinal.innerHTML += `A sua nota da V2 é: ${notaV2.toFixed(2)}<br>`
   mediaFinal.innerHTML += `A sua média é:      ${mediaResultado.toFixed(2)}<br>`
 
@@ -102,6 +103,7 @@ function notaV2 (notaV1, mediaDesejada) {
 
 function exibirMediaDesejada (notaV1, notaV2, mediaResultado){
   mediaFinal.innerHTML = `A sua nota da V1 é:   ${notaV1.toFixed(2)}<br>`
+  mediaFinal.innerHTML += `Os 20% da V2 equivalem a: ${(notaV2 * 0.2).toFixed(2)}<br>`
   mediaFinal.innerHTML += `Para chegar na média ${mediaResultado.toFixed(2)} você precisará de ${notaV2.toFixed(2)} na V2 <br>`
 
   if (vaiPraV3(mediaResultado)) {
