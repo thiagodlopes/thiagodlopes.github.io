@@ -15,7 +15,7 @@ function mediaEad (notaV1, notaV2) {
         let mensagemDeErro = "Você não inseriu a nota da V2."
         alert(`${mensagemDeErro}`)
       }
-  } else if (podeSerNotadaV1(v1) && podeSerNotadaV2(v2)) {
+  } else if (podeSerNotaDaV1(v1) && podeSerNotaDaV2(v2)) {
         v1 += (v2 * 0.2)
         let media = (v1 + v2)/2
         return exibirMedia(v1, v2, media), vaiPraV3(media)
@@ -47,7 +47,7 @@ function vaiPraV3(mediaParaTeste) {
 
 }
 
-function podeSerNotadaV1 (numeroV1) {
+function podeSerNotaDaV1 (numeroV1) {
   if (numeroV1 >= 0 && numeroV1 <= 8) {
   return true
   } else {
@@ -55,7 +55,7 @@ function podeSerNotadaV1 (numeroV1) {
   }
 }
 
-function podeSerNotadaV2 (numeroV2) {
+function podeSerNotaDaV2 (numeroV2) {
   if (numeroV2 >= 0 && numeroV2 <= 10) {
   return true
   } else {
@@ -80,7 +80,7 @@ function notaV2 (notaV1, mediaDesejada) {
         let mensagemDeErro = "Você não inseriu a média desejada."
         alert(`${mensagemDeErro}`)
       }
-  } else if (podeSerNotadaV1(v1) && podeSerNotadaV2(mediaDesejada)) {
+  } else if (podeSerNotaDaV1(v1) && podeSerNotaDaV2(mediaDesejada)) {
 
         let v2 = ((mediaDesejada * 2) - v1)/1.2
 
