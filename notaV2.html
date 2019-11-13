@@ -37,23 +37,25 @@
       </div>
     </nav>
 
-<div class="col">
-    <form class="form-inline">
-      <div class="form-group mb-1">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="addon-wrapping">V1:</span>
-        </div>
-        <input type="number" class="form-control" placeholder="Nota" id="notaV1" min="0" max="8">
+    <div class="col">
+      <div class="row d-flex justify-content-center">
+        <form class="form-inline">
+          <div class="form-group mb-1">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="addon-wrapping">V1:</span>
+            </div>
+            <input type="number" class="form-control" placeholder="Nota" id="notaV1" min="0" max="8">
+          </div>
+          <div class="form-group mx-sm-3 mb-1">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="addon-wrapping">Média:</span>
+            </div>
+            <input type="number" class="form-control" placeholder="Nota" id="mediaDesejada" min="0" max="10" value="7">
+          </div>
+          <button type="button" class="btn" onclick="notaV2()">Enviar</button>
+        </form>
       </div>
-      <div class="form-group mx-sm-3 mb-1">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="addon-wrapping">Média:</span>
-        </div>
-        <input type="number" class="form-control" placeholder="Nota" id="mediaDesejada" min="0" max="10" value="7">
-      </div>
-      <button type="button" class="btn" onclick="notaV2()">Enviar</button>
-    </form>
-</div>
+    </div>
 
 
     <p id="mediaFinal"></p>
