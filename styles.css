@@ -77,3 +77,19 @@ input {
   margin: 2px;
   margin-right: 6px;
 }
+
+.vertical-center {
+  min-height: 100%;
+  min-height: 80vh;
+
+  display: flex;
+  align-items: center;
+}
+
+.card{
+  align-items: center;
+}
+
+.card-text{
+  text-align: left;
+}
