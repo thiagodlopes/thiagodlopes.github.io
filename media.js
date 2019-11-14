@@ -37,7 +37,7 @@ function exibirMedia (notaV1, notaV2, mediaResultado){
 
   somatorioAtividadesAvaliativas.innerHTML = `${notaV1.toFixed(1)}<br>`
   porcentagem.innerHTML = `${(notaV2 * 0.2).toFixed(1)}`
-  dale.innerHTML = `${(notaV2 * 0.2).toFixed(1)}`
+  vintePorcento.innerHTML = `${(notaV2 * 0.2).toFixed(1)}`
   notaDaV2.innerHTML = `${notaV2.toFixed(1)}<br>`
   mediaFinal.innerHTML = ` ${mediaResultado.toFixed(2)}<br>`
 

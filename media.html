@@ -51,9 +51,17 @@
                     </div>
                     <input type="number" class="form-control" placeholder="Nota" id="notaV1" min="0" max="8">
                   </div>
+
                   <div class="form-group mx-sm-3 mb-1">
                     <div class="input-group-prepend">
-                      <span class="input-group-text" id="addon-wrapping">V2:</span>
+                      <span class="input-group-text" data-toggle="tooltip" data-html="true" data-placement="top" title="Porcentagem da nota da V2">20%:</span>
+                    </div>
+                    <output type="number" class="form-control" id="vintePorcento"></output>
+                  </div>
+
+                  <div class="form-group mx-sm-3 mb-1">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="addon-wrapping" data-toggle="tooltip" data-html="true" data-placement="top" title="Insira aqui a nota da V2">V2:</span>
                     </div>
                     <input type="number" class="form-control" placeholder="Nota" id="notaV2" min="0" max="10">
                   </div>
@@ -65,8 +73,8 @@
                 <div class="card" style="max-width: 24rem;">
                     <div class="card-body">
                       <b><h5 class="card-title text-center" id="situação">Situação</h5></b>
-                      <p><span class="card-text">O somatório das atividades avaliativas é: </span><span id="somatorioAtividadesAvaliativas">0.00</span></p>
                       <p><span class="card-text">Os 20% da V2 equivalem a: </span><span id="porcentagem">0.00</span></p>
+                      <p><span class="card-text">A nota final da V1 é: </span><span id="somatorioAtividadesAvaliativas">0.00</span></p>
                       <p><span class="card-text">A nota da V2 é: </span><span id="notaDaV2">0.00</span></p>
                       <p><span class="card-text">A média é: </span><span id="mediaFinal">0.00</span></p>
                       <p><span class="card-text"></span><span id="v3"></span></p>
