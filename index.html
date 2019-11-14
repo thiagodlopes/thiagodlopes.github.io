@@ -46,8 +46,77 @@
       </div>
     </nav>
 
-	<b><p class="text-center">EM MANUTENÇÃO</p></b>
-	<b><p class="text-center">Voltaremos em breve</p></b>
+  <div class="vertical-center">
+    <div class="container">
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header" id="headingZero">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
+              CLIQUE EM MIM
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseZero" class="collapse show" aria-labelledby="headingZero" data-parent="#accordion">
+          <div class="card-body">
+            Clique nos ícones abaixo para exibir informações sobre o tópico.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Logo da Instituição
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            Clique no logo da Instituição, no canto superior esquerdo, para ir até o portal do colaborador.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Calcular Média
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">
+            O item "Calcular média", no canto superior esquerdo, direcionará você para a página do cálculo das médias.
+            Dentro de "Calcular média" há 3 campos "ΣAA", "20%" e "V2", respectivamente:<br>
+
+            - Somatório das Atividades avaliativas;<br>
+            - Porcentagem da nota da V2 para o cálculo da V1;<br>
+            - Nota da V2.<br>
+            <br>
+            Insira o somatório das atividades avaliativas e a nota da V2 e clique em "Enviar".
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Início
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+            Clique em "Início", ao lado do logo da Instituição, para retornar a esta pagina em caso de dúvidas.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 
    <script src="media.js" charset="utf-8"></script>
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
