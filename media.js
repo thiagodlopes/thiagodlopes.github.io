@@ -1,4 +1,10 @@
 'use strict'
+
+
+function aviso(){
+  alert("Passe o cursor mouse sobre os campos em caso de dúvidas.")
+}
+
 function mediaEad (notaV1, notaV2) {
 
   let v1 = parseFloat(document.getElementById("notaV1").value)
@@ -29,13 +35,14 @@ function mediaEad (notaV1, notaV2) {
 
 function exibirMedia (notaV1, notaV2, mediaResultado){
 
-  somatorioAtividadesAvaliativas.innerHTML = `${notaV1.toFixed(2)}<br>`
-  porcentagem.innerHTML = `${(notaV2 * 0.2).toFixed(2)}<br>`
-  notaDaV2.innerHTML = `${notaV2.toFixed(2)}<br>`
+  somatorioAtividadesAvaliativas.innerHTML = `${notaV1.toFixed(1)}<br>`
+  porcentagem.innerHTML = `${(notaV2 * 0.2).toFixed(1)}`
+  dale.innerHTML = `${(notaV2 * 0.2).toFixed(1)}`
+  notaDaV2.innerHTML = `${notaV2.toFixed(1)}<br>`
   mediaFinal.innerHTML = ` ${mediaResultado.toFixed(2)}<br>`
 
   if (vaiPraV3(mediaResultado)) {
-    //v3.innerHTML = `Com a média ${mediaResultado.toFixed(2)} o aluno precisará da V3. <br> Clique na aba "Formulário V3" para agendar sua avaliação.<br>`
+    //v3.innerHTML = `Com a média ${mediaResultado.toFixed(1)} o aluno precisará da V3. <br> Clique na aba "Formulário V3" para agendar sua avaliação.<br>`
     situação.innerHTML = "Reprovado"
   } else {
         situação.innerHTML = "Aprovado"
@@ -106,11 +113,15 @@ function notaV2 (notaV1, mediaDesejada) {
 }
 
 function exibirMediaDesejada (notaV1, notaV2, mediaResultado){
-  mediaFinal.innerHTML = `A sua nota da V1 é:   ${notaV1.toFixed(2)}<br>`
-  mediaFinal.innerHTML += `Os 20% da V2 equivalem a: ${(notaV2 * 0.2).toFixed(2)}<br>`
-  mediaFinal.innerHTML += `Para chegar na média ${mediaResultado.toFixed(2)} você precisará de ${notaV2.toFixed(2)} na V2 <br>`
+  mediaFinal.innerHTML = `A sua nota da V1 é:   ${notaV1.toFixed(1)}<br>`
+  mediaFinal.innerHTML += `Os 20% da V2 equivalem a: ${(notaV2 * 0.2).toFixed(1)}<br>`
+  mediaFinal.innerHTML += `Para chegar na média ${mediaResultado.toFixed(1)} você precisará de ${notaV2.toFixed(1)} na V2 <br>`
 
   if (vaiPraV3(mediaResultado)) {
-    mediaFinal.innerHTML += `Com a média ${mediaResultado.toFixed(2)} você precisará fazer a V3. <br> Clique na aba "Formulário V3" para agendar sua avaliação.<br>`
+    mediaFinal.innerHTML += `Com a média ${mediaResultado.toFixed(1)} você precisará fazer a V3. <br> Clique na aba "Formulário V3" para agendar sua avaliação.<br>`
   }
 }
+
+$(function () {
+$('[data-toggle="tooltip"]').tooltip()
+})
