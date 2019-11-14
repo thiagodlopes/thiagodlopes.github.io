@@ -67,7 +67,7 @@ input {
   background-color: #169898;
 }
 
-.btn {
+#botão {
   color: white;
   background-color: #169898;
 }
@@ -86,7 +86,7 @@ input {
   align-items: center;
 }
 
-.card{
+#cartão{
   align-items: center;
 }
 
@@ -95,5 +95,6 @@ input {
 }
 
 #navbarDropdownMenuLink{
-  color: #ffffff
+  color: #5b828e;
+  font-size: 12px;
 }
