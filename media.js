@@ -28,13 +28,17 @@ function mediaEad (notaV1, notaV2) {
 }
 
 function exibirMedia (notaV1, notaV2, mediaResultado){
-  mediaFinal.innerHTML = `A sua nota da V1 é:  ${notaV1.toFixed(2)}<br>`
-  mediaFinal.innerHTML += `Os 20% da V2 equivalem a: ${(notaV2 * 0.2).toFixed(2)}<br>`
-  mediaFinal.innerHTML += `A sua nota da V2 é: ${notaV2.toFixed(2)}<br>`
-  mediaFinal.innerHTML += `A sua média é:      ${mediaResultado.toFixed(2)}<br>`
+
+  somatorioAtividadesAvaliativas.innerHTML = `${notaV1.toFixed(2)}<br>`
+  porcentagem.innerHTML = `${(notaV2 * 0.2).toFixed(2)}<br>`
+  notaDaV2.innerHTML = `${notaV2.toFixed(2)}<br>`
+  mediaFinal.innerHTML = ` ${mediaResultado.toFixed(2)}<br>`
 
   if (vaiPraV3(mediaResultado)) {
-    mediaFinal.innerHTML += `Com a média ${mediaResultado.toFixed(2)} você precisará fazer a V3. <br> Clique na aba "Formulário V3" para agendar sua avaliação.<br>`
+    //v3.innerHTML = `Com a média ${mediaResultado.toFixed(2)} o aluno precisará da V3. <br> Clique na aba "Formulário V3" para agendar sua avaliação.<br>`
+    situação.innerHTML = "Reprovado"
+  } else {
+        situação.innerHTML = "Aprovado"
   }
 }
 
