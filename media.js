@@ -5,6 +5,10 @@ function aviso(){
   alert("Passe o cursor mouse sobre os campos em caso de dúvidas.")
 }
 
+function meuContato(){
+  alert("Ainda sem lattes, mas meu e-mail é: thiagodaniellopes99@gmail.com")
+}
+
 function mediaEad (notaV1, notaV2) {
 
   let v1 = parseFloat(document.getElementById("notaV1").value)

@@ -93,3 +93,7 @@ input {
 .card-text{
   text-align: left;
 }
+
+#navbarDropdownMenuLink{
+  color: #ffffff
+}
