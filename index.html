@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -11,7 +11,7 @@
   <body>
 
     <nav class="navbar navbar-expand-sm navbar-dark">
-      <div class="logo"><a href="http://www.redentor.edu.br/" target="_blank"><img src="uniredentor.png"></a>
+      <div class="logo"><a href="http://www.redentor.edu.br/portaldocolaborador" target="_blank"><img src="uniredentor.png"></a>
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -22,21 +22,101 @@
             <a class="nav-link" href="index.html">Início</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="media.html">Qual a minha média?</a>
+            <a class="nav-link" href="media.html" onclick="aviso()">Calcular média</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="notaV2.html">Quanto preciso tirar na V2?</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="notaV2.html">Quanto preciso tirar na V2?</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfM_8DfA7GgiAW28xp3FWyKjog7Cd6D7TfBuGO_HaiF2bgk9A/viewform?usp=sf_link" target="_blank">Formulário V2</a>
+            <a class="nav-link disabled" href="https://docs.google.com/forms/d/e/1FAIpQLSfM_8DfA7GgiAW28xp3FWyKjog7Cd6D7TfBuGO_HaiF2bgk9A/viewform?usp=sf_link" target="_blank">Formulário V2</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="">Formulário V3</a>
-          </li>
+          </li> -->
         </ul>
+        <span class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Desenvolvedores
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" onclick="meuContato()">Thiago Lopes</a>
+            <a class="dropdown-item" href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K8646302P3" target="_blank">Thiago Ximenes</a>
+          </div>
+        </span>
       </div>
     </nav>
 
+  <div class="vertical-center">
+    <div class="container">
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header" id="headingZero">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
+              Instruções
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseZero" class="collapse show" aria-labelledby="headingZero" data-parent="#accordion">
+          <div class="card-body">
+            Clique nos ícones abaixo para exibir informações sobre o tópico.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Logo da Instituição
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            Clique no logo da Instituição, no canto superior esquerdo, para ir até o portal do colaborador.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Calcular Média
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">
+            O item "Calcular média", no canto superior esquerdo, direcionará você para a página do cálculo das médias.
+            Dentro de "Calcular média" há 3 campos "ΣAA", "20%" e "V2", respectivamente:<br>
+
+            - Somatório das Atividades avaliativas;<br>
+            - Porcentagem da nota da V2 para o cálculo da V1;<br>
+            - Nota da V2.<br>
+            <br>
+            Insira o somatório das atividades avaliativas e a nota da V2 e clique em "Enviar".
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Início
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+            Clique em "Início", ao lado do logo da Instituição, para retornar a esta pagina em caso de dúvidas.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 
    <script src="media.js" charset="utf-8"></script>
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
