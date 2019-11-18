@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -18,10 +18,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="index.html">Início</a>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <li class="nav-item active">
             <a class="nav-link" href="media.html" onclick="aviso()">Calcular média</a>
           </li>
           <!-- <li class="nav-item">
@@ -46,81 +46,61 @@
       </div>
     </nav>
 
-  <div class="vertical-center">
-    <div class="container">
-    <div id="accordion">
-      <div class="card">
-        <div class="card-header" id="headingZero">
-          <h5 class="mb-0">
-            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
-              Instruções
-            </button>
-          </h5>
-        </div>
+      <div class="vertical-center">
+          <div class="container">
+            <div class="col">
+              <div class="row d-flex justify-content-center mb-2">
+                <form class="form-inline">
+                  <div class="form-group mr-4 mb-1">
+                    <div class="input-group-prepend">
 
-        <div id="collapseZero" class="collapse show" aria-labelledby="headingZero" data-parent="#accordion">
-          <div class="card-body">
-            Clique nos ícones abaixo para exibir informações sobre o tópico.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingOne">
-          <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-              Logo da Instituição
-            </button>
-          </h5>
-        </div>
+                      <span class="input-group-text" data-toggle="tooltip" data-html="true" data-placement="left" title="Somatório das Atividades Avaliativas <br> (MA1 + APS1 + MA2 + APS2)">
+                          ΣAA:
+                      </span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="Nota" id="notaV1" min="0" max="8">
+                  </div>
 
-        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-          <div class="card-body">
-            Clique no logo da Instituição, no canto superior esquerdo, para ir até o portal do colaborador.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingTwo">
-          <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Calcular Média
-            </button>
-          </h5>
-        </div>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-          <div class="card-body">
-            O item "Calcular média", no canto superior esquerdo, direcionará você para a página do cálculo das médias.
-            Dentro de "Calcular média" há 3 campos "ΣAA", "20%" e "V2", respectivamente:<br>
+                  <div class="form-group mr-4 mb-1">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" data-toggle="tooltip" data-html="true" data-placement="top" title="Porcentagem da nota da V2">20%:</span>
+                    </div>
+                    <output type="number" class="form-control" id="vintePorcento"></output>
+                  </div>
 
-            - Somatório das Atividades avaliativas;<br>
-            - Porcentagem da nota da V2 para o cálculo da V1;<br>
-            - Nota da V2.<br>
-            <br>
-            Insira o somatório das atividades avaliativas e a nota da V2 e clique em "Enviar".
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingThree">
-          <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Início
-            </button>
-          </h5>
-        </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-          <div class="card-body">
-            Clique em "Início", ao lado do logo da Instituição, para retornar a esta pagina em caso de dúvidas.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
+                  <div class="form-group mr-4 mb-1">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="addon-wrapping" data-toggle="tooltip" data-html="true" data-placement="top" title="Insira aqui a nota da V2">V2:</span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="Nota" id="notaV2" min="0" max="10">
+                  </div>
+                  <div class="form-group mb-1">
+                  <button type="button" class="btn" id="botão" onclick="mediaEad()">Enviar</button>
+                  </div>
+                </form>
+              </div>
 
+              <div class="row d-flex justify-content-center">
+                <div class="card" id="cartão"style="max-width: 24rem;">
+                    <div class="card-body">
+                      <b><h5 class="card-title text-center" id="situação">Situação</h5></b>
+                      <p><span class="card-text">Os 20% da V2 equivalem a: </span><span id="porcentagem">0.00</span></p>
+                      <p><span class="card-text">A nota final da V1 é: </span><span id="somatorioAtividadesAvaliativas">0.00</span></p>
+                      <p><span class="card-text">A nota da V2 é: </span><span id="notaDaV2">0.00</span></p>
+                      <p><span class="card-text">A média é: </span><span id="mediaFinal">0.00</span></p>
+                      <p><span class="card-text"></span><span id="v3"></span></p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
    <script src="media.js" charset="utf-8"></script>
-   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>
