@@ -67,7 +67,7 @@ input {
   background-color: #169898;
 }
 
-.btn {
+#botão {
   color: white;
   background-color: #169898;
 }
@@ -76,4 +76,25 @@ input {
   max-height: 40px;
   margin: 2px;
   margin-right: 6px;
+}
+
+.vertical-center {
+  min-height: 100%;
+  min-height: 80vh;
+
+  display: flex;
+  align-items: center;
+}
+
+#cartão{
+  align-items: center;
+}
+
+.card-text{
+  text-align: left;
+}
+
+#navbarDropdownMenuLink{
+  color: #5b828e;
+  font-size: 12px;
 }
